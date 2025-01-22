@@ -18,29 +18,45 @@ const Index = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[400px]">
                     <div className="row-span-3">
-                      <h4 className="font-medium leading-none">Our Services</h4>
+                      <h4 className="font-medium leading-none">Learning Resources</h4>
                       <p className="text-sm text-muted-foreground">
-                        Comprehensive physiotherapy resources and opportunities
+                        Comprehensive physiotherapy education and opportunities
                       </p>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       <Button variant="ghost" className="justify-start">Blog Posts</Button>
                       <Button variant="ghost" className="justify-start">Courses</Button>
-                      <Button variant="ghost" className="justify-start">Job Opportunities</Button>
-                      <Button variant="ghost" className="justify-start">Workshops</Button>
+                      <Button variant="ghost" className="justify-start">Announcements</Button>
+                      <Button variant="ghost" className="justify-start">Certificates</Button>
                     </div>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Button variant="ghost">About</Button>
+                <NavigationMenuTrigger>Community</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[400px]">
+                    <div className="row-span-3">
+                      <h4 className="font-medium leading-none">Join Our Community</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Connect with fellow physiotherapists across platforms
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <Button variant="ghost" className="justify-start">WhatsApp</Button>
+                      <Button variant="ghost" className="justify-start">Telegram</Button>
+                      <Button variant="ghost" className="justify-start">Facebook</Button>
+                      <Button variant="ghost" className="justify-start">Instagram</Button>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Button variant="ghost">Contact</Button>
+                <Button variant="ghost">AI Assistant</Button>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -55,65 +71,113 @@ const Index = () => {
       <section className="container mx-auto px-4 py-20 text-center">
         <h1 className="text-5xl font-bold mb-6">Welcome to NewPhysio Academy</h1>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Empowering physiotherapy graduates with knowledge, opportunities, and community support
+          Your comprehensive platform for physiotherapy education, job opportunities, and professional growth
         </p>
         <div className="flex justify-center gap-4">
-          <Button size="lg">Get Started</Button>
-          <Button size="lg" variant="outline">Learn More</Button>
+          <Button size="lg">Explore Courses</Button>
+          <Button size="lg" variant="outline">Read Blog</Button>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-center mb-12">What We Offer</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Our Platform Features</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <Card>
             <CardHeader>
-              <CardTitle>Knowledge Hub</CardTitle>
-              <CardDescription>Access to comprehensive learning resources</CardDescription>
+              <CardTitle>Rich Blog Content</CardTitle>
+              <CardDescription>SEO-optimized articles with reading time estimates</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Free materials, case studies, and expert insights to enhance your professional knowledge.</p>
+              <p>Expert-written articles with progress tracking and easy sharing across social platforms.</p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Career Opportunities</CardTitle>
-              <CardDescription>Connect with potential employers</CardDescription>
+              <CardTitle>Professional Courses</CardTitle>
+              <CardDescription>Free and premium learning opportunities</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Latest job postings, internships, and networking opportunities for physiotherapists.</p>
+              <p>Structured courses with certificates, taught by experienced educators in the field.</p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Professional Development</CardTitle>
-              <CardDescription>Workshops and courses</CardDescription>
+              <CardTitle>AI Assistant</CardTitle>
+              <CardDescription>Intelligent physiotherapy support</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Online and offline workshops, specialized courses, and certification programs.</p>
+              <p>Get instant answers to your physiotherapy questions with our specialized AI chatbot.</p>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Community Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <h2 className="text-3xl font-bold mb-8">Join Our Growing Community</h2>
-        <p className="text-xl text-gray-600 mb-8">
-          Connect with fellow physiotherapists, share knowledge, and grow together
-        </p>
-        <div className="flex justify-center gap-8">
-          <Card className="w-[300px]">
+      {/* Announcements Preview */}
+      <section className="container mx-auto px-4 py-20 bg-gray-50">
+        <h2 className="text-3xl font-bold text-center mb-12">Latest Updates</h2>
+        <div className="max-w-3xl mx-auto">
+          <Card>
             <CardHeader>
-              <CardTitle>Social Channels</CardTitle>
+              <CardTitle>Announcements</CardTitle>
+              <CardDescription>Stay updated with the latest opportunities</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-col gap-4">
-                <Button variant="outline">WhatsApp Channel</Button>
-                <Button variant="outline">Telegram Group</Button>
-                <Button variant="outline">Facebook Page</Button>
+              <div className="space-y-4">
+                <div className="p-4 bg-white rounded-lg shadow-sm">
+                  <span className="text-sm text-gray-500">2 hours ago</span>
+                  <h3 className="font-semibold mt-1">New Job Opportunity Available</h3>
+                  <p className="text-gray-600">Senior Physiotherapist position open at Cairo Medical Center</p>
+                </div>
+                <div className="p-4 bg-white rounded-lg shadow-sm">
+                  <span className="text-sm text-gray-500">1 day ago</span>
+                  <h3 className="font-semibold mt-1">Upcoming Workshop</h3>
+                  <p className="text-gray-600">Advanced Rehabilitation Techniques - Register Now</p>
+                </div>
               </div>
+              <Button variant="outline" className="w-full mt-4">View All Updates</Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Social Integration */}
+      <section className="container mx-auto px-4 py-20">
+        <h2 className="text-3xl font-bold text-center mb-8">Join Our Growing Community</h2>
+        <p className="text-xl text-gray-600 mb-12 text-center max-w-2xl mx-auto">
+          Connect with us across all platforms and stay updated with the latest in physiotherapy
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>WhatsApp Channel</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Button variant="outline" className="w-full">Join Channel</Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Telegram Group</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Button variant="outline" className="w-full">Join Group</Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Facebook Page</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Button variant="outline" className="w-full">Follow Us</Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Instagram</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Button variant="outline" className="w-full">Follow Us</Button>
             </CardContent>
           </Card>
         </div>
@@ -128,34 +192,35 @@ const Index = () => {
               <p className="text-gray-600">Empowering the next generation of physiotherapists</p>
             </div>
             <div>
-              <h3 className="font-bold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-gray-900">Home</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900">About</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900">Services</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900">Contact</a></li>
-              </ul>
-            </div>
-            <div>
               <h3 className="font-bold mb-4">Resources</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-600 hover:text-gray-900">Blog</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-gray-900">Courses</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900">Workshops</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-gray-900">Jobs</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900">Certificates</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900">Updates</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold mb-4">Connect</h3>
+              <h3 className="font-bold mb-4">Community</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-600 hover:text-gray-900">WhatsApp</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-gray-900">Telegram</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-gray-900">Facebook</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900">Instagram</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">Contact</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-600 hover:text-gray-900">About Us</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900">Support</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900">Terms</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900">Privacy</a></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-200 mt-8 pt-8 text-center">
-            <p className="text-gray-600">&copy; 2024 NewPhysio. All rights reserved.</p>
+            <p className="text-gray-600">&copy; 2024 NewPhysio Academy. All rights reserved.</p>
           </div>
         </div>
       </footer>
