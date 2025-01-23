@@ -6,6 +6,10 @@ import { Link, useNavigate } from "react-router-dom";
 const Index = () => {
   const navigate = useNavigate();
 
+  const handleExploreCoursesClick = () => {
+    navigate('/courses');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Navigation */}
@@ -37,7 +41,13 @@ const Index = () => {
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       <Button variant="ghost" className="justify-start">Blog Posts</Button>
-                      <Button variant="ghost" className="justify-start" onClick={() => navigate('/courses')}>Courses</Button>
+                      <Button 
+                        variant="ghost" 
+                        className="justify-start" 
+                        onClick={() => navigate('/courses')}
+                      >
+                        Courses
+                      </Button>
                       <Button variant="ghost" className="justify-start">Announcements</Button>
                       <Button variant="ghost" className="justify-start">Certificates</Button>
                     </div>
@@ -70,7 +80,7 @@ const Index = () => {
           </NavigationMenu>
           <div className="flex gap-4">
             <Button variant="outline" onClick={() => navigate('/auth')}>Sign In</Button>
-            <Button onClick={() => navigate('/auth?mode=signup')}>Sign Up</Button>
+            <Button onClick={() => navigate('/auth')}>Sign Up</Button>
           </div>
         </div>
       </nav>
@@ -82,7 +92,7 @@ const Index = () => {
           Your comprehensive platform for physiotherapy education, job opportunities, and professional growth
         </p>
         <div className="flex justify-center gap-4">
-          <Button size="lg" onClick={() => navigate('/courses')}>Explore Courses</Button>
+          <Button size="lg" onClick={handleExploreCoursesClick}>Explore Courses</Button>
           <Button size="lg" variant="outline">Read Blog</Button>
         </div>
       </section>
