@@ -1,8 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Navigation */}
@@ -19,9 +22,7 @@ const Index = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Button variant="ghost" asChild>
-                  <NavigationMenuLink href="/courses">
-                    Courses
-                  </NavigationMenuLink>
+                  <Link to="/courses">Courses</Link>
                 </Button>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -36,7 +37,7 @@ const Index = () => {
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       <Button variant="ghost" className="justify-start">Blog Posts</Button>
-                      <Button variant="ghost" className="justify-start">Courses</Button>
+                      <Button variant="ghost" className="justify-start" onClick={() => navigate('/courses')}>Courses</Button>
                       <Button variant="ghost" className="justify-start">Announcements</Button>
                       <Button variant="ghost" className="justify-start">Certificates</Button>
                     </div>
@@ -68,8 +69,8 @@ const Index = () => {
             </NavigationMenuList>
           </NavigationMenu>
           <div className="flex gap-4">
-            <Button variant="outline">Sign In</Button>
-            <Button>Sign Up</Button>
+            <Button variant="outline" onClick={() => navigate('/auth')}>Sign In</Button>
+            <Button onClick={() => navigate('/auth?mode=signup')}>Sign Up</Button>
           </div>
         </div>
       </nav>
@@ -81,7 +82,7 @@ const Index = () => {
           Your comprehensive platform for physiotherapy education, job opportunities, and professional growth
         </p>
         <div className="flex justify-center gap-4">
-          <Button size="lg">Explore Courses</Button>
+          <Button size="lg" onClick={() => navigate('/courses')}>Explore Courses</Button>
           <Button size="lg" variant="outline">Read Blog</Button>
         </div>
       </section>
