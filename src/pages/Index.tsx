@@ -18,6 +18,13 @@ const Index = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
+                <Button variant="ghost" asChild>
+                  <NavigationMenuLink href="/courses">
+                    Courses
+                  </NavigationMenuLink>
+                </Button>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[400px]">
